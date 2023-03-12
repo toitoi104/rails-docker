@@ -67,13 +67,16 @@ User.create!(name: "Aさん", age: 19)
 ```
 
 select
-```
+```angular2html
 User.all
 ```
-```
+```angular2html
 User.find(1)
 user = User.find(1)
 user.name
+```
+```angular2html
+User.where("age>=19")
 ```
 
 update
