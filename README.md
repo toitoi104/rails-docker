@@ -23,6 +23,7 @@ gem "sprockets-rails"
 
 ## 基礎学習
 
+https://railsguides.jp/getting_started.html
 https://www.youtube.com/watch?v=IyEcu9e1YgM
 
 

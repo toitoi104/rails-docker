@@ -1,0 +1,13 @@
+<h1>ユーザー詳細</h1>
+
+<%# <%= にすると画面出力。　%>
+
+<%= @user.name %><br>
+<%= @user.age %>歳
+
+<% if true %>
+  if文出力:<%= @user.name %>
+<% end %>
+
+<br>
+<%= link_to "戻る", users_path %>
