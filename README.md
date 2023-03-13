@@ -86,3 +86,10 @@ User.find(1)
 user.name = "hoge"
 user.save
 ```
+
+## Crudコマンド
+
+scaffold と model作成を同時に行うコマンド
+```angular2html
+docker-compose run web rails g scaffold WeightHistory user:references weight:integer memo:string
+```

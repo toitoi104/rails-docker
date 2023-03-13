@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :weight_histories
   get '', to: 'top#index'
 
   # /users/1
