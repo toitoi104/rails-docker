@@ -2,24 +2,7 @@
 
 ## 目的
 
-転職活動するにあたり、Railsを利用している企業が多かったため、一応触っておく
-
-## 環境構築参考URL
-
-https://zenn.dev/toono_f/scraps/e7346c6e90c35b
-
-## ファイル修正点
-
-docker compose run時に下記エラー
-```
-Could not find gem 'sprockets-rails' in locally installed gems.
-```
-
-Gemfileに下記を追加して対応
-
-```
-gem "sprockets-rails"
-```
+転職活動するにあたり、Railsを利用している企業が多かったため、触っておく
 
 ## 基礎学習
 

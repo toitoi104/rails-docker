@@ -1,6 +1,19 @@
 <p style="color: green"><%= notice %></p>
 
-<%= render @weight_history %>
+<div>
+  <strong>ユーザー</strong>
+  <%= @weight_history.user.name %>
+</div>
+
+<div>
+  <strong>体重</strong>
+  <%= weight_comment(@weight_history.weight) %>
+</div>
+
+<div>
+  <strong>メモ</strong>
+  <%= @weight_history.memo %>
+</div>
 
 <div>
   <%= link_to "Edit this weight history", edit_weight_history_path(@weight_history) %> |

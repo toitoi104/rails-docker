@@ -1,5 +1,14 @@
 Rails.application.routes.draw do
   resources :weight_histories
+
+  # resourcesから必要なRouteingのみ利用する
+  # resources :weight_histories, only:[destroy]
+  # resources :weight_histories, only:[destroy, index]
+
+  # resourcesから不要なRouteingを除く
+  # resources :weight_histories, except:[destroy]
+  # resources :weight_histories, except:[destroy, index]
+
   get '', to: 'top#index'
 
   # /users/1

@@ -36,7 +36,6 @@ class WeightHistoriesController < ApplicationController
     end
   end
 
-  # PATCH/PUT /weight_histories/1 or /weight_histories/1.json
   def update
     respond_to do |format|
       if @weight_history.update(weight_history_params)
@@ -49,7 +48,6 @@ class WeightHistoriesController < ApplicationController
     end
   end
 
-  # DELETE /weight_histories/1 or /weight_histories/1.json
   def destroy
     @weight_history.destroy
 
