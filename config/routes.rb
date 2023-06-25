@@ -22,4 +22,5 @@ Rails.application.routes.draw do
   get '/boards', to: 'boards#index', as: "boards"
   get '/boards/new', to: 'boards#new', as: "boardsNew"
   post '/boards', to: 'boards#create', as: 'boardsCreate'
+  get '/boards/:id', to: 'boards#show', as: 'boardsShow'
 end
