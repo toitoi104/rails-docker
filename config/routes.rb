@@ -15,4 +15,11 @@ Rails.application.routes.draw do
   # /users/2
   get '/users', to: 'users#index', as: 'users'
   get '/users/:id', to: 'users#show', as: "user"
+
+  # Udemy分
+  # root だとトップへのアクセスという意味 get '' と同じ意味
+  #root 'boards#index'
+  get '/boards', to: 'boards#index', as: "boards"
+  get '/boards/new', to: 'boards#new', as: "boardsNew"
+  post '/boards', to: 'boards#create', as: 'boardsCreate'
 end

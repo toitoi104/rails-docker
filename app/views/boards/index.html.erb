@@ -1,0 +1,57 @@
+<div class="flex justify-between">
+  <h1 class="text-base font-bold">掲示板一覧</h1>
+  <div>
+    <a href="/boards/new" class="text-blue-500 hover:text-blue-800">
+      新規作成
+    </a>
+  </div>
+</div>
+
+<table class="min-w-full divide-y divide-gray-200">
+  <thead class="bg-gray-50">
+  <tr>
+    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+      ID
+    </th>
+    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+      タイトル
+    </th>
+    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+      作成者
+    </th>
+    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+      作成日時
+    </th>
+    <th scope="col" class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
+      更新日時
+    </th>
+  </tr>
+  </thead>
+  <tbody class="bg-white divide-y divide-gray-200">
+  <% @boards.each do |board| %>
+    <tr>
+      <th class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+        <%= board.id %>
+      </th>
+      <th class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+        <%= board.title %>
+      </th>
+      <th class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+        <%= board.name %>
+      </th>
+      <th class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+        <%= board.created_at.to_s(:datetime_jp) %>
+      </th>
+      <th class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+        <%= board.updated_at.to_s(:datetime_jp) %>
+      </th>
+    </tr>
+  <% end %>
+  <!-- 続く行... -->
+  </tbody>
+</table>
+
+
+
+
+

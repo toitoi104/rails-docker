@@ -4,13 +4,26 @@
 
 転職活動するにあたり、Railsを利用している企業が多かったため、触っておく
 
+## Railsドキュメント
+
+Railsドキュメント: https://railsdoc.com/
+Railsガイド: https://railsguides.jp/
+
 ## 基礎学習
 
 https://railsguides.jp/getting_started.html
 https://www.youtube.com/watch?v=IyEcu9e1YgM
 
 
+
 ## コマンド
+
+docker 立ち上げ
+```angular2html
+$ docker compose up -d
+$ 
+```
+
 ターミナルでコマンドを実行する時は「docker-compose run web」をつける
 下記は「ruby -v」を実行する場合
 ```
@@ -76,3 +89,4 @@ scaffold と model作成を同時に行うコマンド
 ```angular2html
 docker-compose run web rails g scaffold WeightHistory user:references weight:integer memo:string
 ```
+

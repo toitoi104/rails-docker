@@ -33,3 +33,6 @@
 # デフォルトから追加
 .ruby-version
 .idea
+
+/app/assets/builds/*
+!/app/assets/builds/.keep

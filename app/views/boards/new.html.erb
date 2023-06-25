@@ -1,0 +1,42 @@
+<div class="flex justify-between">
+  <h1 class="text-base font-bold">掲示板作成</h1>
+  <div>
+    <a href="/boards" class="text-blue-500 hover:text-blue-800">
+      掲示板一覧
+    </a>
+  </div>
+</div>
+<%#= form_for @board do |f| %>
+<!--  <div>-->
+    <%#= f.label :name, '名前' %>
+    <%#= f.text_field :name, class: 'w-full p-1 border' %>
+<!--  </div>-->
+<!--  <div>-->
+    <%#= f.label :title, 'タイトル' %>
+    <%#= f.text_field :title, class: 'w-full p-1 border' %>
+<!--  </div>-->
+<!--  <div>-->
+    <%#= f.label :body, '本文' %>
+    <%#= f.text_area :body, class: 'w-full p-1 border', rows: 10 %>
+<!--  </div>-->
+  <%#= f.submit '保存', class:'text-white bg-blue-600 p-2' %>
+<%# end %>
+
+
+<form action="/boards" method="post">
+  <div>
+    <label for="name">名前</label>
+    <input id="name" name='board[name]' class="w-full p-1 border">
+  </div>
+  <div class="form-group">
+    <label for="title">タイトル</label>
+    <input id="title" name='board[title]' class="w-full p-1 border">
+  </div>
+  <div class="form-group">
+    <label for="body">本文</label>
+    <textarea id="body" name='board[body]' class="w-full p-1 border" rows="10"></textarea>
+  </div>
+  <button type="submit" class="text-white bg-blue-600 p-2">保存</button>
+  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
+</form>
+
