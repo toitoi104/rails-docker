@@ -23,4 +23,8 @@ Rails.application.routes.draw do
   get '/boards/new', to: 'boards#new', as: "boardsNew"
   post '/boards', to: 'boards#create', as: 'boardsCreate'
   get '/boards/:id', to: 'boards#show', as: 'boardsShow'
+  get '/boards/edit/:id', to: 'boards#edit', as: 'boardsEdit'
+  patch '/boards/update/:id', to: 'boards#update', as: 'boardsUpdate'
+  #resources :boards #リソースで定義する場合
+  # resources :boards, only[:index, :new, :create, :new]
 end

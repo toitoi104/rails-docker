@@ -33,3 +33,8 @@ config.time_zone = "Tokyo"
 $ docker-compose stop
 $ docker-compose up -d
 ```
+
+## 設定済みルートの確認
+
+http://localhost:3000/rails/info/routes
+
