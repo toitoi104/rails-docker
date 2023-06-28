@@ -6,6 +6,9 @@
     </a>
   </div>
 </div>
+
+<%= render partial: 'form', locals: {board: @board} %>
+
 <%#= form_for @board do |f| %>
 <!--  <div>-->
     <%#= f.label :name, '名前' %>
@@ -23,20 +26,20 @@
 <%# end %>
 
 
-<form action="/boards" method="post">
-  <div>
-    <label for="name">名前</label>
-    <input id="name" name='board[name]' class="w-full p-1 border">
-  </div>
-  <div class="form-group">
-    <label for="title">タイトル</label>
-    <input id="title" name='board[title]' class="w-full p-1 border">
-  </div>
-  <div class="form-group">
-    <label for="body">本文</label>
-    <textarea id="body" name='board[body]' class="w-full p-1 border" rows="10"></textarea>
-  </div>
-  <button type="submit" class="text-white bg-blue-600 p-2">保存</button>
-  <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
-</form>
+<!--<form action="/boards" method="post">-->
+<!--  <div>-->
+<!--    <label for="name">名前</label>-->
+<!--    <input id="name" name='board[name]' class="w-full p-1 border">-->
+<!--  </div>-->
+<!--  <div class="form-group">-->
+<!--    <label for="title">タイトル</label>-->
+<!--    <input id="title" name='board[title]' class="w-full p-1 border">-->
+<!--  </div>-->
+<!--  <div class="form-group">-->
+<!--    <label for="body">本文</label>-->
+<!--    <textarea id="body" name='board[body]' class="w-full p-1 border" rows="10"></textarea>-->
+<!--  </div>-->
+<!--  <button type="submit" class="text-white bg-blue-600 p-2">保存</button>-->
+<!--  <input type="hidden" name="authenticity_token" value="<%#= form_authenticity_token %>">-->
+<!--</form>-->
 
