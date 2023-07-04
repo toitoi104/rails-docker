@@ -28,6 +28,7 @@
       更新日時
     </th>
     <th></th>
+    <th></th>
   </tr>
   </thead>
   <tbody class="bg-white divide-y divide-gray-200">
@@ -53,11 +54,18 @@
           詳細
         </a>
       </td>
+      <td>
+        <a href="/boards/delete/<%= board.id %>" data-turbo-method="delete" class="text-blue-500 hover:text-blue-800">
+          削除
+        </a>
+      </td>
     </tr>
   <% end %>
   <!-- 続く行... -->
   </tbody>
 </table>
+
+<%= paginate @boards %>
 
 
 

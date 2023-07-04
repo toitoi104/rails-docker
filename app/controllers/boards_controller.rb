@@ -1,8 +1,10 @@
 class BoardsController < ActionController::Base
   layout 'tailwind'
 
+  before_action :set_target_board, only: %i[show edit update delete]
+
   def index
-    @boards = Board.all
+    @boards = Board.page(params[:page]).per(10)
   end
 
   def new
@@ -11,19 +13,24 @@ class BoardsController < ActionController::Base
 
   def create
     Board.create(board_params)
+
+    redirect_to action: :index
   end
 
   def show
-    @board = Board.find(params[:id])
   end
 
   def edit
-    @board = Board.find(params[:id])
   end
 
   def update
-    board = Board.find(params[:id])
-    board.update(board_params)
+    @board.update(board_params)
+
+    redirect_to action: :index
+  end
+
+  def delete
+    @board.destroy
 
     redirect_to action: :index
   end
@@ -32,5 +39,9 @@ class BoardsController < ActionController::Base
 
   def board_params
     params.require(:board).permit(:name, :title, :body)
+  end
+
+  def set_target_board
+    @board = Board.find(params[:id])
   end
 end
