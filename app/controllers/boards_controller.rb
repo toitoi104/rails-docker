@@ -12,9 +12,10 @@ class BoardsController < ActionController::Base
   end
 
   def create
-    Board.create(board_params)
+    board = Board.create(board_params)
+    flash[:notice] = "#{board.title}の掲示板を作成しました"
 
-    redirect_to action: :index
+    redirect_to boardsShow_path(board.id)
   end
 
   def show
@@ -31,6 +32,7 @@ class BoardsController < ActionController::Base
 
   def delete
     @board.destroy
+    flash[:notice] = "#{@board.title}の掲示板が削除されました"
 
     redirect_to action: :index
   end

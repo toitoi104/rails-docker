@@ -12,6 +12,11 @@
   </div>
 </div>
 
+<% if flash[:notice] %>
+  <div class="bg-blue-100 border border-blue-500 text-blue-700 px-4 py-3 rounded mb-5">
+    <%= flash[:notice] %>
+  </div>
+<% end %>
 
 <%= render partial: 'board', object: @board %>
 
