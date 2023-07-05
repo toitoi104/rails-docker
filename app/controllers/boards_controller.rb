@@ -8,14 +8,20 @@ class BoardsController < ActionController::Base
   end
 
   def new
-    @board = Board.new
+    @board = Board.new(flash[:board])
   end
 
   def create
-    board = Board.create(board_params)
-    flash[:notice] = "#{board.title}の掲示板を作成しました"
+    board = Board.new(board_params)
 
-    redirect_to boardsShow_path(board.id)
+    if board.save
+      flash[:notice] = "#{board.title}の掲示板を作成しました"
+      redirect_to boardsShow_path(board.id)
+    else
+      flash[:board] = board
+      flash[:error_messages] = board.errors.full_messages
+      redirect_to boardsNew_path
+    end
   end
 
   def show

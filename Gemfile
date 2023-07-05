@@ -51,6 +51,7 @@ gem "turbo-rails"
 gem "stimulus-rails"
 
 gem 'kaminari'
+gem 'rails-i18n'
 
 # Use Sass to process CSS
 # gem "sassc-rails"
