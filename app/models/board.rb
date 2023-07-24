@@ -1,5 +1,7 @@
 class Board < ApplicationRecord
   has_many :comments
+  belongs_to :board_tag_relations
+  belongs_to :tags, through: :board_tag_relations
 
   # presence: true 値が必須（requiredと一緒）
   validates :name, presence: true, length: {maximum: 10}

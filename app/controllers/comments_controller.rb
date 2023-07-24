@@ -22,7 +22,7 @@ class CommentsController < ActionController::Base
   def delete
     comment = Comment.find(params[:id])
     boardId = comment.board_id
-    
+
     comment.delete
 
     flash[:notice] = "削除しました"

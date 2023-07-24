@@ -78,3 +78,15 @@ $ bundle exec annotate
 $ rails g model comment board:references name:string comment:text 
 $ bundle exec rake db:migrate
 ```
+
+## タグ付け機能
+
+タグテーブル
+```angular2htmlr
+$ rails g model tag name:string
+```
+
+タグ関連テーブル
+```angular2html
+$ rails g model board_tag_relation board:references tag:references
+```
