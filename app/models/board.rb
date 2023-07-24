@@ -1,4 +1,6 @@
 class Board < ApplicationRecord
+  has_many :comments
+
   # presence: true 値が必須（requiredと一緒）
   validates :name, presence: true, length: {maximum: 10}
   validates :title, presence: true, length: {maximum: 30}

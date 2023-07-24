@@ -50,8 +50,9 @@ gem "turbo-rails"
 
 gem "stimulus-rails"
 
-gem 'kaminari'
-gem 'rails-i18n'
+gem 'kaminari' # ページネーション
+gem 'rails-i18n' # 日本語化
+gem 'annotate' # モデルの関係性
 
 # Use Sass to process CSS
 # gem "sassc-rails"

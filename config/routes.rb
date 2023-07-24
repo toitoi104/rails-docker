@@ -28,4 +28,7 @@ Rails.application.routes.draw do
   get '/boards/delete/:id', to: 'boards#delete', as: 'boardsDelete'
   #resources :boards #リソースで定義する場合
   # resources :boards, only[:index, :new, :create, :new, :delete]
+
+  post '/comments/create', to: 'comments#create'
+  get '/comments/delete/:id', to: 'comments#delete'
 end

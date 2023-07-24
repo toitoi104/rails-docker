@@ -63,3 +63,18 @@ $ bundle exec rails g kaminari:views default
 
 tailwindCssに対応してほしいため、viewは下記に変更
 https://github.com/amatsuda/kaminari_themes/pull/73/commits/af992dd998a98eb5892c7bd529a362a0a0a539a7#diff-6131bb6beb79e8fb945fc6f4503879d43b3195306292ee6ddfde820b4136c2e9
+
+## annotate
+
+rails7に対応していない
+
+```angular2html
+$ bundle exec annotate
+```
+
+## コメントModel作成
+
+```angular2html
+$ rails g model comment board:references name:string comment:text 
+$ bundle exec rake db:migrate
+```

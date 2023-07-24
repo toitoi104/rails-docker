@@ -1,12 +1,4 @@
-<% if flash[:error_messages] %>
-  <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded">
-    <ul>
-      <% flash[:error_messages].each do |message|%>
-        <li><%= message %></li>
-      <% end %>
-    </ul>
-  </div>
-<% end %>
+<%= render partial: 'error' %>
 
 <form action="/boards" method="post">
   <div>
