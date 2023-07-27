@@ -13,6 +13,16 @@
     <label for="body">本文</label>
     <textarea id="body" name='board[body]' class="w-full p-1 border" rows="10"></textarea>
   </div>
+
+  <div>
+    <% Tag.all.each do |n| %>
+      <label class="pr-2">
+      <input type="checkbox" name="tag_ids[]" value="<%= n.id %>">
+        <%= n.name %>
+      </label>
+    <% end %>
+  </div>
+
   <button type="submit" class="text-white bg-blue-600 p-2">保存</button>
   <input type="hidden" name="authenticity_token" value="<%= form_authenticity_token %>">
 </form>
