@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2023_07_24_140051) do
+ActiveRecord::Schema[7.0].define(version: 2023_07_27_132836) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
@@ -21,6 +21,13 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_24_140051) do
     t.datetime "updated_at", null: false
     t.index ["board_id"], name: "index_board_tag_relations_on_board_id"
     t.index ["tag_id"], name: "index_board_tag_relations_on_tag_id"
+  end
+
+  create_table "board_users", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "password_digest", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "boards", force: :cascade do |t|
@@ -51,6 +58,7 @@ ActiveRecord::Schema[7.0].define(version: 2023_07_24_140051) do
     t.integer "age"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["name"], name: "index_users_on_name", unique: true
   end
 
   create_table "weight_histories", force: :cascade do |t|

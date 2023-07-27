@@ -1,4 +1,10 @@
 Rails.application.routes.draw do
+  get 'board_users/new'
+  get 'board_users/create'
+  get 'board_users/me'
+  get 'home/index'
+  get 'sessions/create'
+  get 'sessions/destroy'
   resources :weight_histories
 
   # resourcesから必要なRouteingのみ利用する

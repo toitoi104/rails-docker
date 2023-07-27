@@ -90,3 +90,16 @@ $ rails g model tag name:string
 ```angular2html
 $ rails g model board_tag_relation board:references tag:references
 ```
+
+## ユーザーテーブル準備 
+
+```
+$ docker compose exec web rails g model board_user name:string password_digest:string
+$ docker compose exec web rails db:migrate
+```
+
+## セッション管理コントローラー 
+
+```angular2html
+$ docker compose exec web rails g controller sessions create destroy --skip-template-engine
+```
