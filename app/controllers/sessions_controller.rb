@@ -6,12 +6,12 @@ class SessionsController < ApplicationController
       session[:user_id] = board_user.id
       redirect_to mypage_path
     else
-      render 'home/index'
+      render board_users_me_path
     end
   end
 
   def destroy
     session.delete(:user_id)
-    redirect_to root_path
+    redirect_to board_users_me_path
   end
 end

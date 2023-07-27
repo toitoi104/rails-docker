@@ -5,7 +5,7 @@ Rails.application.routes.draw do
   get 'board_users/me'
 
   post 'login', to: 'sessions#create'
-  post 'logout', to: 'sessions#destroy'
+  get 'logout', to: 'sessions#destroy'
 
   resources :weight_histories
 
