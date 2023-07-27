@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
-  get 'mypage', to: 'users#me'
+  get 'mypage', to: 'board_users#me'
   get 'board_users/new'
-  get 'board_users/create'
+  post 'board_users/create'
   get 'board_users/me'
 
   post 'login', to: 'sessions#create'
