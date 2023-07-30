@@ -103,3 +103,21 @@ $ docker compose exec web rails db:migrate
 ```angular2html
 $ docker compose exec web rails g controller sessions create destroy --skip-template-engine
 ```
+
+## rspec
+
+gemfileにrspecを記載した後、下記を実行
+```angular2html
+$ rails-docker % docker compose run web bundle exec rails g rspec:install
+```
+
+BoardUserモデルのテストファイル作成
+```angular2html
+$ docker compose exec web bundle exec rails g rspec:model BoardUser
+$ docker compose exec web bundle exec rails g rspec:controller BoardUser
+```
+
+テストコマンド例
+```angular2html
+$ docker compose exec web bundle exec rspec ./spec/models
+```

@@ -61,7 +61,10 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
+  host: test-db
   database: app_test
+  username: postgres # docker-compose.ymlの記載内容と同じ値に設定
+  password: postgres # docker-compose.ymlの記載内容と同じ値に設定
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
